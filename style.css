@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+
+:root {
+  /* Primary colors */
+  
+  /* PokadotRed */
+  --Red: hsl(1, 90%, 64%);
+  /* Numbers of notification recieved & hover color */
+  --Blue: hsl(219, 85%, 26%);
+
+
+  /* Neutral colors below*/
+
+  /* Body Background Color */
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  /* Notification Section Background Color */
+  --White: hsl(0, 0%, 100%);
+  /* Notification unclicked Background Color */
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  /* Notification Message received Background Color */
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  /* Time Notification received */
+  --Grayish-blue: hsl(219, 14%, 63%);
+  /* Reason for Notification */
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  /* Names of avatar notification */
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--Very-light-grayish-blue);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 2rem;
+}
+
+main {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 2rem 0.5rem 2rem;
+  background-color: var(--White);
+  border-radius: 1rem;
+  box-shadow: 0 10px 50px 0 rgba(15, 34, 70, 0.057);
+}
+
+.notification-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification-heading > h1 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--Very-dark-blue);
+}
+
+.notification-heading > h1 > span {
+  color: var(--White);
+  background-color: var(--Blue);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  font-weight: 500;
+  vertical-align: middle;
+  border-radius: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.notification-heading > p {
+  color: var(--Dark-grayish-blue);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+.notification-heading > p:hover {
+  color: var(--Blue);
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.notification-unread {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--Very-light-grayish-blue);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.notification-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.avatar {
+  width: 2.4rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.notification-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-name {
+  font-size: 0.8rem;
+  color: var(--Very-dark-blue);
+  cursor: pointer;
+  font-weight: 800;
+  transition: 0.3s ease-in-out;
+}
+
+.profile-name:hover {
+  color: var(--Blue);
+}
+
+.notification-reason {
+  font-size: 0.8rem;
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  margin: 0 0.3rem;
+}
+
+.notification-subject {
+  font-size: 0.8rem;
+  color: var(--Dark-grayish-blue);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin-right: 0.3rem;
+}
+
+.chess-club {
+  color: var(--Blue);
+}
+
+.notification-subject:hover {
+  color: var(--Blue);
+}
+
+
+
+.pokerdot {
+  font-size: 0.4rem;
+  color: var(--Red);
+  vertical-align: middle;
+}
+
+.time-received {
+  font-size: 0.8rem;
+  color: var(--Grayish-blue);
+}
+
+
+.notification-read {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.notification-displayed {
+  font-size: 0.8rem;
+  border: 1px solid var(--Light-grayish-blue-2);
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  line-height: 1.1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.notification-displayed:hover {
+  background-color: var(--Light-grayish-blue-1);
+}
+
+.subject-image-container {
+  flex: 1;  
+  display: flex;
+  justify-content: flex-end;
+}
+
+.subjectavatar {
+  width: 2.4rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.active .notification-unread {
+  background-color: transparent;
+}
+
+.active .pokerdot {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution > p > a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 650px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
